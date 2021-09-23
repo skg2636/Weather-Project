@@ -3,7 +3,7 @@ from password_task import encryptPassword
 
 def db_connection():
     """This function is used to create connection with database"""
-    conn = sql.connect(host='localhost',user='root',password='Sandeep123',database='python_db')
+    conn = sql.connect(host='localhost',user='root',password='password',database='db_name')
     cursor = conn.cursor()
     return conn,cursor
 

@@ -117,10 +117,6 @@ def getWeather():
             sunrise = f"{t[3]}:{t[4]}:{t[5]}"
             data['sys']['sunset'] = sunset
             data['sys']['sunrise']= sunrise
-            # data['main']['temp'] -= 273.15
-            # data['main']['temp_max'] -= 273.15
-            # data['main']['temp_min'] -= 273.15
-            # data['main']['feels_like'] -= 273.15
             t = time.localtime(data['dt'])
             updated_time= time.asctime(t)
             return render_template('developerpage.html', data = data,updated_time=updated_time)
